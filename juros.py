@@ -1,9 +1,9 @@
 def decorator_imprimir(func):
-    def interno(*args, **kargs):
+    def wrapper(*args, **kargs):
         result = func(*args, **kargs)
         print("CAPITAL: ", args[0], " TAXA: ", args[1], " TEMPO:", args[2])
         print("RESULADO: ", result)
-    return interno
+    return wrapper
 
 
 @decorator_imprimir
